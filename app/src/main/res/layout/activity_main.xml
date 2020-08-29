@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAnaEkran"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="clAnaEkran"
+    tools:context=".MainActivity"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <ExpandableListView
+        android:id="@+id/lvExp"
+        android:layout_width="372dp"
+        android:layout_height="626dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </ExpandableListView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="368dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etAra"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ems="10"
+            android:hint="Ara"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/btnAra"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@null"
+            android:onClick="btnAra"
+            android:tint="@color/siyah"
+            app:srcCompat="@android:drawable/ic_search_category_default" />
+
+        <ImageButton
+            android:id="@+id/btnGeri"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:onClick="btnGeri"
+            android:tint="@color/siyah"
+            android:visibility="invisible"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <Space
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnEkle"
+            android:tint="@color/yesil"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="182dp"
+        android:layout_height="73dp"
+        android:layout_marginRight="16dp"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:translationY="-73dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnTarife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/turuncu"
+            android:drawableTop="@android:drawable/ic_input_add"
+            android:drawableTint="@color/yesil"
+            android:onClick="btnTarife"
+            android:padding="3dp"
+            android:text="Tarife\nEkle"
+            android:textColor="@color/beyaz" />
+
+        <Button
+            android:id="@+id/btnRandevu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@color/turuncu"
+            android:drawableTop="@android:drawable/ic_input_add"
+            android:drawableTint="@color/yesil"
+            android:onClick="btnRandevu"
+            android:padding="3dp"
+            android:text="Randevu\nEkle"
+            android:textColor="@color/beyaz" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSil"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:foregroundGravity="right"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:translationY="-65dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnIptal"
+
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnIptal"
+            android:tint="@color/beyaz"
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <ImageButton
+            android:id="@+id/btnSil"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnSil"
+            android:tint="@color/beyaz"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/swTumunuGoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:text="Tüm Randevuları Göster      "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

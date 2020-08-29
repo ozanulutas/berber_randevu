@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main3Activity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="36dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="36dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="TARİFE EKLE"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etKesimTur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kesim Türü"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/edFiyat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ücret"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnKaydet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="btnKaydet"
+            android:text="Kaydet"
+            android:background="@color/turuncu"
+            android:drawableLeft="@android:drawable/ic_input_add"
+            android:drawablePadding="-45dp"
+            android:drawableTint="@color/yesil"
+            android:paddingLeft="18dp"
+            android:textColor="@color/beyaz"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:text="Tarife Listesi"
+            android:textSize="15sp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="singleChoice" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout"
+        android:layout_width="230dp"
+        android:layout_height="52dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="bottom|right"
+        android:orientation="horizontal"
+        android:translationY="-55dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnIptal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnIptal"
+            android:tint="@color/beyaz"
+
+            app:srcCompat="@android:drawable/ic_menu_revert" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnSil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnSil"
+            android:tint="@color/beyaz"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="16dp"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnDuzenle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yuvarlak_buton"
+            android:onClick="btnDuzenle"
+            android:tint="@color/beyaz"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
